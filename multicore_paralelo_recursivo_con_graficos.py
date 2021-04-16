@@ -62,7 +62,7 @@ if __name__ == '__main__':
     print('Relación entre tiempo a MANO y tiempo a toda MAQUINA:',round(tiempo_a_mano / tiempo_a_toda_maquina,3),'%')
     print('Relación entre la computación tradicional ( a mano ) VS a la programación a toda máquina:', round((tiempo_a_mano / tiempo_a_toda_maquina) / mp.cpu_count(),3)*100)
 
-    height = [tiempo_a_toda_maquina, tiempo_a_mano]
+    height = [tiempo_a_toda_maquina, tiempo_a_mano]# aquí hay un error, primero es tiempo mano y luego tiempo a toda máquina
     bars = ('A mano', 'A toda maquina')
     x_pos = np.arange(len(bars))
     plt.bar(x_pos, height)
